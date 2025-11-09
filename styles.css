@@ -1,0 +1,48 @@
+/* References:
+	Bootstrap 4.5.3 Documentation – Theming, Navbar, Cards, and Sticky Footer examples
+  https://getbootstrap.com/docs/4.5/getting-started/theming/
+  https://getbootstrap.com/docs/4.5/components/navbar/
+  https://getbootstrap.com/docs/4.5/getting-started/theming/#components
+  https://getbootstrap.com/docs/4.5/examples/sticky-footer/ */
+
+
+/* for brand color */
+:root {
+    --brand: #4c77ff;
+}
+
+/* Based on line height */
+body {
+    line-height: 1.6;
+}
+
+/* Navbar border adapted from Bootstrap visual style */
+.navbar {
+    border-bottom: 1px solid rgba(0, 0, .08);
+}
+
+/* Active nav link styling: highlights the current page */
+.nav-link.active,
+.nav-link[aria-current="page"] {
+    color: var(--brand) !important;
+    font-weight: 600;
+}
+
+/* Hero background gradient inspired by Bootstrap examples: https://getbootstrap.com/docs/4.5/examples/ */
+.hero {
+    background: linear-gradient(135deg, #f6f8ff 0%, #ffffff 60%);
+    border-radius: 1rem;
+    padding: 3rem;
+    margin-top: 1rem;
+}
+
+/* Card image styling adapted from Bootstrap cards: ensures consistent image */
+.card img {
+    object-fit: cover;
+    height: 160px;
+}
+
+/* Footer border adapted from previosuly cited bootstrap example */
+footer {
+    border-top: 1px solid rgba(0, 0, 0, .08);
+}
