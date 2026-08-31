@@ -1,99 +1,117 @@
-<!DOCTYPE html>
-
-<!-- index.html Based on CS50 shorts and bootstrap examples.
-Additional markup inspired by https://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+<!doctype html>
 <html lang="en">
-
-    <head>
-        <!-- Viewport meta tag ensures proper scaling on mobile -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <!-- bootstrap 4.5.3 css -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
-        <!-- jquery/ bootstrap 4.5.3 js -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-
-        <!-- CSS link -->
-        <link href="styles.css" rel="stylesheet">
-
-        <title>Home * My Webpage</title>
-    </head>
-
-    <body>
-        <!-- Navbar adapted from Bootstrap 4.5.3 https://getbootstrap.com/docs/4.5/components/navbar/ -->
-        <nav class="navbar navbar-expand-md bg-white">
-            <div class="container">
-                <a class="navbar-brand fw-bold" href="index.html">My Web</a>
-
-                <!-- Menu button visible on smaller screens -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <!-- Collapsible navigation links -->
-                <div id="nav" class="collapse navbar-collapse">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"> <a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"> <a class="nav-link" href="about.html">About</a></li>
-                        <li class="nav-item"> <a class="nav-link" href="projects.html">Projects</a></li>
-                        <li class="nav-item"> <a class="nav-link" href="gallery.html">Gallery</a></li>
-                        <li class="nav-item"> <a class="nav-link" href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="William Price — applied mathematics student, builder, and veteran.">
+    <title>Résumé — William Price</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="wordmark" href="index.html" aria-label="William Price home">WP</a>
+        <nav class="site-nav" aria-label="Primary navigation">
+            <a class="active" aria-current="page" href="index.html">Résumé</a>
+            <a href="serve.html">Serve</a>
+            <a href="build.html">Build</a>
+            <a href="contact.html">Contact</a>
         </nav>
+    </header>
 
-        <!-- "Hero" section introducing the site -->
-        <header class="container">
-            <div class="hero">
-                <h1 class="display-5">Hello, CS50</h1>
-                <p class="lead">This is my small, multi-page webpage experiment.</p>
-                <a class="btn btn-primary" href="projects.html">See Projects</a>
-                <a class="btn btn-outline-secondary ms-2" href="about.html">Learn More</a>
-            </div>
-        </header>
+    <main>
+        <section class="mosaic" aria-labelledby="resume-title">
+            <article class="tile tile-hero">
+                <div class="hero-monogram" aria-hidden="true">WP</div>
+                <div class="hero-caption">
+                    <span>William Price</span>
+                    <span>Cambridge, Massachusetts</span>
+                </div>
+            </article>
 
-        <!-- Main content divided into a responsive two column layout -->
-        <main class="container my-5">
-            <section class="row g-f">
-                <article class="col-md-6">
-                    <h2>Highlights</h2>
-                    <ul>
-                        <li>Clean nav connects my pages (I hope).</li>
-                        <li>Discrete pages for clarity and accessability.</li>
-                        <li>Responsive image cards (I think?)</li>
-                    </ul>
-                </article>
-                <aside class="col-md-6">
-                    <h2>Quick Notes:</h2>
-                    <p>Want to go to visuals? click this: <a href="gallery.html">Gallery</a>. Want to correspond?: <a href="contact.html">Contact</a></p>
-                    <p>Fun fact: this page uses <strong>10+</strong> distinct tags. <em>Overachieving tomake up for the Midterm</em></p>
-                </aside>
-            </section>
-        </main>
+            <article class="tile tile-title">
+                <span class="tile-number">01</span>
+                <div>
+                    <p class="eyebrow">Curriculum vitae</p>
+                    <h1 id="resume-title">Résumé</h1>
+                </div>
+            </article>
 
-        <!-- Footer pattern based on Bootstrap "Sticky Footer" example -->
-        <footer class="container py-4 text-muted">
-            <small>&copy; <span id="year"></span> My Web * <a href="about.html">About</a> * <a href="contact.html">Contact</a></small>
-        </footer>
+            <article class="tile tile-identity">
+                <span class="annotation">// identity</span>
+                <h2>William<br>Price</h2>
+                <p>Applied mathematics, systems thinking, and public service.</p>
+            </article>
 
-        <!-- JS functionality adapted from Bootstrap documentation:
-	       - Highlights the current page in navbar
-	       - Dynamically updates copyright year -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-        <script>
-            // Identify the current page’s file name (https://developer.mozilla.org/en-US/docs/Web/API/Location)
-            const here = location.pathname.split('/').pop() || 'index.html';
-            // Highlight current nav link (https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll)
-            document.querySelectorAll('.nav-link').forEach(a => {
-                if (a.getAttribute('href') === here) a.classList.add('active');
-                if (a.getAttribute('href') === here) a.setAttribute('aria-current', 'page');
-            });
-            // Display the current year in footer
-            document.getElementById('year').textContent = new Date().getFullYear();
-        </script>
-    </body>
+            <article class="tile tile-math" aria-label="Decorative mathematical graph">
+                <svg viewBox="0 0 360 240" role="img" aria-label="A rising mathematical curve on a coordinate plane">
+                    <path class="axis" d="M42 20V205H340M42 160H340"/>
+                    <path class="curve" d="M48 184C88 183 112 174 142 153C180 126 199 74 235 58C264 45 288 52 334 24"/>
+                    <circle cx="142" cy="153" r="5"/>
+                    <circle cx="235" cy="58" r="5"/>
+                    <text x="248" y="52">f(x)</text>
+                    <text x="325" y="180">x</text>
+                    <text x="28" y="28">y</text>
+                </svg>
+                <span class="math-note">model → test → revise</span>
+            </article>
 
+            <article class="tile tile-education">
+                <span class="annotation">// education</span>
+                <h2>Harvard University</h2>
+                <p class="detail">B.A. candidate in Applied Mathematics</p>
+                <p class="detail">Secondary in Computer Science</p>
+                <p class="tile-footer">Class of 2027</p>
+            </article>
+
+            <article class="tile tile-experience">
+                <span class="annotation">// experience</span>
+                <div class="entry">
+                    <h2>Founder &amp; Builder</h2>
+                    <p>gig_work</p>
+                </div>
+                <div class="entry">
+                    <h2>Founder</h2>
+                    <p>Project M4M</p>
+                </div>
+            </article>
+
+            <article class="tile tile-principle">
+                <p class="principle-mark">∑</p>
+                <blockquote>Build useful things.<br>Serve real people.</blockquote>
+            </article>
+
+            <article class="tile tile-skills">
+                <span class="annotation">// toolkit</span>
+                <h2>Skills</h2>
+                <ul>
+                    <li>Mathematical modeling</li>
+                    <li>Optimization</li>
+                    <li>Algorithms &amp; data structures</li>
+                    <li>Python · OCaml · SQL</li>
+                    <li>Git</li>
+                </ul>
+            </article>
+
+            <article class="tile tile-service">
+                <span class="annotation">// background</span>
+                <p class="service-kicker">United States</p>
+                <h2>Marine Corps</h2>
+                <p>Leadership, discipline, adaptability, and responsibility under pressure.</p>
+                <a class="text-link" href="serve.html">More about service <span aria-hidden="true">↗</span></a>
+            </article>
+
+            <article class="tile tile-contact">
+                <span class="annotation">// next</span>
+                <h2>Let’s make something matter.</h2>
+                <a class="button-link" href="mailto:wprice@college.harvard.edu">Email William <span aria-hidden="true">↗</span></a>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <span>William Price</span>
+        <a href="mailto:wprice@college.harvard.edu">wprice@college.harvard.edu</a>
+        <span>Cambridge, MA</span>
+    </footer>
+</body>
 </html>
